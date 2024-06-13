@@ -9,21 +9,21 @@ import {
   Table
 } from '@/components/ui/table';
 import { Button } from '@/components/ui/button';
-import { SelectUser } from '@/lib/db';
+// import { SelectUser } from '@/lib/db';
 import { deleteUser } from './actions';
 import { useRouter } from 'next/navigation';
 
 export function UsersTable({
-  users,
-  offset
+  users
+  // offset
 }: {
-  users: SelectUser[];
-  offset: number | null;
+  users: any[];
+  // offset: number | null;
 }) {
   const router = useRouter();
 
   function onClick() {
-    router.replace(`/?offset=${offset}`);
+    // router.replace(`/?offset=${offset}`);
   }
 
   return (
@@ -40,12 +40,14 @@ export function UsersTable({
           </TableHeader>
           <TableBody>
             {users.map((user) => (
-              <UserRow key={user.id} user={user} />
+              <>
+                <UserRow key={user.id} user={user} />
+              </>
             ))}
           </TableBody>
         </Table>
       </form>
-      {offset !== null && (
+      {/* {offset !== null && (
         <Button
           className="mt-4 w-40"
           variant="secondary"
@@ -53,12 +55,12 @@ export function UsersTable({
         >
           Next Page
         </Button>
-      )}
+      )} */}
     </>
   );
 }
 
-function UserRow({ user }: { user: SelectUser }) {
+function UserRow({ user }: { user: any }) {
   const userId = user.id;
   const deleteUserWithId = deleteUser.bind(null, userId);
 
