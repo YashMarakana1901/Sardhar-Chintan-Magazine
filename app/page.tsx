@@ -4,31 +4,37 @@ import { Search } from './search';
 
 const users = [
   {
+    id: 1,
     name: 'Alice Johnson',
     email: 'alice.johnson@example.com',
     username: 'alicej'
   },
   {
+    id: 2,
     name: 'Bob Smith',
     email: 'bob.smith@example.com',
     username: 'bsmith'
   },
   {
+    id: 3,
     name: 'Charlie Brown',
     email: 'charlie.brown@example.com',
     username: 'charlieb'
   },
   {
+    id: 4,
     name: 'Alice Johnson',
     email: 'alice.johnson@example.com',
     username: 'alicej'
   },
   {
+    id: 5,
     name: 'Bob Smith',
     email: 'bob.smith@example.com',
     username: 'bsmith'
   },
   {
+    id: 6,
     name: 'Charlie Brown',
     email: 'charlie.brown@example.com',
     username: 'charlieb'
